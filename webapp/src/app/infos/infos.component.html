@@ -1,8 +1,11 @@
-<div *ngIf="test">
-  <h2>{{ test.text | uppercase }} Details</h2>
-  <div><span>id: </span>{{test._id}}</div>
-  <div><span>id: </span>{{test.title}}</div>
-</div>
-<button (click)="goBack()">go back</button>
+<div>
+  Blop
+  <div *ngIf="test">
+    <h2>{{ test.text | uppercase }} Details</h2>
+    <div><span>id: </span>{{test._id}}</div>
+    <div><span>id: </span>{{test.title}}</div>
 
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
 

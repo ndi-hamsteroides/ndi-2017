@@ -11,7 +11,10 @@ export class TestGetService {
   constructor(private http: HttpClient) { }
 
   getInfos (): Observable<Infos> {
-    return this.http.get<Infos>(this.getUrl)
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    headers = headers.set('Access-Control-Allow-Origin', '*');
+    return this.http.get<Infos>(this.getUrl,{headers: headers})
   }
 
 
