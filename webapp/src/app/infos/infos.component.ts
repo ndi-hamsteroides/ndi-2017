@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
+import { catchError, map, tap } from 'rxjs/operators';
+import {TestGetService} from "../test-get.service";
+import {Infos} from "../infos";
 
 @Component({
   selector: 'app-infos',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfosComponent implements OnInit {
 
-  constructor() { }
+  test: Infos;
+
+  constructor(private location: Location,
+              private testGet: TestGetService) { }
 
   ngOnInit() {
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  getTest(): void {
+    this.testGet.getInfos()
+      .subscribe(test => this.test = test);
   }
 
 }
