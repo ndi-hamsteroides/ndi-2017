@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { catchError, map, tap } from 'rxjs/operators';
 import {TestGetService} from "../test-get.service";
 import {Infos} from "../infos";
 
@@ -17,6 +16,7 @@ export class InfosComponent implements OnInit {
               private testGet: TestGetService) { }
 
   ngOnInit() {
+    this.getTest();
   }
 
   goBack(): void {
