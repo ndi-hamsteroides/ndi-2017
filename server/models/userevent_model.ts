@@ -1,4 +1,4 @@
 export class UserEvent {
-	id_user : int;
-	id_event : int;
+	id_user : number;
+	id_event : number;
 }

@@ -1,4 +1,4 @@
 export class Event {
-	id : int;
-	sam : int;
+	id : number;
+	sam : number;
 }

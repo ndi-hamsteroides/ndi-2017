@@ -1,4 +1,4 @@
 export class InfoCategory {
-	id_info : int;
-	id_category : int;
+	id_info : number;
+	id_category : number;
 }

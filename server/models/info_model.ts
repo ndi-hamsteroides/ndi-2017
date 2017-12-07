@@ -1,4 +1,4 @@
 export class Info {
-	id : int;
+	id : number;
 	description : string;
 }
