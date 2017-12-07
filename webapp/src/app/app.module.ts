@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
+import { AledComponent } from './aled/aled.component';
 
 
 
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     NavbarComponent
     InfosComponent,
+    AledComponent,
   ],
   imports: [
     BrowserModule,
