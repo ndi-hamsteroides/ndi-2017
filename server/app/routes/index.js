@@ -5,6 +5,7 @@ const eventApi = require('./event_api');
 // const userEventApi = require('./userevent_api');
 const categoryApi = require('./category_api');
 const infoApi = require('./info_api');
+
 module.exports = function(app, db) {
   noteRoutes(app, db);
   userApi(app,db);
