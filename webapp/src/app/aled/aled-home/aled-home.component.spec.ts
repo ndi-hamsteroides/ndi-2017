@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AledComponent } from './aled.component';
+import { AledHomeComponent } from './aled-home.component';
 
-describe('AledComponent', () => {
-  let component: AledComponent;
-  let fixture: ComponentFixture<AledComponent>;
+describe('AledHomeComponent', () => {
+  let component: AledHomeComponent;
+  let fixture: ComponentFixture<AledHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AledComponent ]
+      declarations: [ AledHomeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AledComponent);
+    fixture = TestBed.createComponent(AledHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

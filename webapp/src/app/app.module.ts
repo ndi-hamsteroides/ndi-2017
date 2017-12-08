@@ -11,10 +11,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
-import { AledComponent } from './aled/aled.component';
+import { AledHomeComponent } from './aled/aled-home/aled-home.component';
 import { SamComponent } from './sam/sam.component';
-import { AledOkComponent } from './aled-ok/aled-ok.component';
-import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
+import { AledOkComponent } from './aled/aled-ok/aled-ok.component';
+import { AledBreatheComponent } from './aled/aled-breathe/aled-breathe.component';
 
 
 
@@ -25,7 +25,7 @@ import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
     HomeComponent,
     NavbarComponent,
     InfosComponent,
-    AledComponent,
+    AledHomeComponent,
     SamComponent,
     AledOkComponent,
     AledBreatheComponent,

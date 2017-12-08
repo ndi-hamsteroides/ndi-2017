@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AledBreatheComponent implements OnInit {
 
+  private status: number;
+
   constructor() { }
 
   ngOnInit() {
+    this.status = 0;
   }
 
 }
