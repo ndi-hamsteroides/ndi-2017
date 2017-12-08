@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AledPlsComponent implements OnInit {
 
+  private pls: boolean;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  doPls() {
+    this.pls = true;
   }
 
 }

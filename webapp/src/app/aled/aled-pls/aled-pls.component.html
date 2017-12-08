@@ -1,3 +1,27 @@
-<p>
-  aled-pls works!
-</p>
+<div *ngIf="!pls" class="container">
+  <div class="col text-center">
+    <p>
+      Met ton ami(e) en Position Latérale de Sécurité (PLS). Pour éviter qu'il / elle ne s'étouffe en vomissant.
+    </p>
+    <p>
+      <img src="../../../assets/images/robert-cute.png" height="200" width="150"/>
+    </p>
+    <button type="button" class="btn btn-success" (click)="doPls()">Comment mettre en PLS ?</button>
+  </div>
+</div>
+
+<div *ngIf="pls" class="container">
+  <div class="col text-center">
+    <p>
+      La PLS
+    </p>
+    <div class="text-left">
+      <span class="badge badge-pill badge-info">1 </span> Agenouille toi à côté de ton ami(e) <br/>
+      <span class="badge badge-pill badge-info">2 </span> Place la paume de sa main opposée à toi contre son oreille la plus proche de toi. <br/>
+      <span class="badge badge-pill badge-info">3 </span> Attrape sa jambe opposée derrière son genoux et relèves la en la pliant. <br/>
+      <span class="badge badge-pill badge-info">4 </span> Tire <b>en douceur</b> sa jambe pour faire rouler ton ami(e) sur le côté, son genou doit toucher le sol<br/>
+      <span class="badge badge-pill badge-info">5 </span> Place son genou supérieur perpendiculairement à son coprs.<br/>
+      <span class="badge badge-pill badge-info">6 </span> Ouvre lui la bouche avec le pouce et l'index.
+    </div>
+  </div>
+</div>

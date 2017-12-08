@@ -1,37 +1,37 @@
 // routes/note_routes.js
+var Info = require('../../models/info_model');
 var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function (app, db) {
     // ***** GET ***** //
-    app.get('/notes/:id', (req, res) => {
-        console.log(req);
+    app.get('/Info/:id', (req, res) => {
         const id = req.params.id;
         const details = {
             '_id': new ObjectID(id)
         };
-        db.collection('notes').findOne(details, (err, item) => {
+        db.collection('Info').findOne(details, (err, item) => {
             if (err) {
-                console.log(err);
                 res.send({
                     'error': 'An error has occurred'
                 });
             } else {
-                
-                res.header("Access-Control-Allow-Origin", "*");
-                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-                console.log("izoezouyb");
-                res.send(item);
+                if(item === null){
+                    res.send(item);
+                }
+                else{
+                    var i = new Info(item._id,item.description);
+                    res.send(i);
+                }
             }
         });
     });
 
     // ***** POST ***** //
-    app.post('/notes', (req, res) => {
-        const note = {
-            text: req.body.body,
-            title: req.body.title
+    app.post('/Info', (req, res) => {
+        const info = {
+            description: req.body.description
         };
-        db.collection('notes').insert(note, (err, result) => {
+        db.collection('Info').insert(info, (err, result) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
@@ -43,33 +43,34 @@ module.exports = function (app, db) {
     });
     
     // ***** DELETE ***** //
-    app.delete('/notes/:id', (req, res) => {
+    app.delete('/Info/:id', (req, res) => {
         const id = req.params.id;
         const details = {
             '_id': new ObjectID(id)
         };
-        db.collection('notes').remove(details, (err, item) => {
+        db.collection('Info').remove(details, (err, item) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
                 });
             } else {
-                res.send('Note ' + id + ' deleted!');
+                res.send('Info ' + id + ' deleted!');
             }
         });
     });
 
-    app.put('/notes/:id', (req, res) => {
+    app.put('/Info/:id', (req, res) => {
         const id = req.params.id;
-        const details = { '_id': new ObjectID(id) };
+        const info = { '_id': new ObjectID(id) };
         // Problème si on veut uniquement modifier un attribut
-        if(req.body.body !== undefined && req.body.title !== undefined){
-            const note = { text: req.body.body, title: req.body.title };
-            db.collection('notes').update(details, note, (err, result) => {
+        if(req.body.description !== undefined){
+            const description = { description: req.body.description};
+            db.collection('Info').update(info, description, (err, result) => {
               if (err) {
                   res.send({'error':'An error has occurred'});
               } else {
-                  res.send(note);
+                  var infoObj = new Info(req.params.id,req.body.description);
+                  res.send(infoObj);
               } 
             });
         }else{

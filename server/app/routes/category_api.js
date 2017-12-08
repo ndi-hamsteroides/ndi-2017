@@ -1,37 +1,32 @@
-// routes/note_routes.js
+// routes/user_api.ts
 var ObjectID = require('mongodb').ObjectID;
+var Category = require('../../models/category_model');
 
 module.exports = function (app, db) {
     // ***** GET ***** //
-    app.get('/notes/:id', (req, res) => {
-        console.log(req);
+    app.get('/Category/:id', (req, res) => {
         const id = req.params.id;
         const details = {
             '_id': new ObjectID(id)
         };
-        db.collection('notes').findOne(details, (err, item) => {
+        db.collection('Category').findOne(details, (err, item) => {
             if (err) {
-                console.log(err);
                 res.send({
                     'error': 'An error has occurred'
                 });
             } else {
-                
-                res.header("Access-Control-Allow-Origin", "*");
-                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-                console.log("izoezouyb");
-                res.send(item);
+                var u = new Category(item._id,item.label);
+                res.send(u);
             }
         });
     });
 
     // ***** POST ***** //
-    app.post('/notes', (req, res) => {
-        const note = {
-            text: req.body.body,
-            title: req.body.title
+    app.post('/Category', (req, res) => {
+        const category = {
+            label: req.body.label
         };
-        db.collection('notes').insert(note, (err, result) => {
+        db.collection('Category').insert(category, (err, result) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
@@ -41,35 +36,36 @@ module.exports = function (app, db) {
             }
         });
     });
-    
+
     // ***** DELETE ***** //
-    app.delete('/notes/:id', (req, res) => {
+    app.delete('/Category/:id', (req, res) => {
         const id = req.params.id;
         const details = {
             '_id': new ObjectID(id)
         };
-        db.collection('notes').remove(details, (err, item) => {
+        db.collection('Category').remove(details, (err, item) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
                 });
             } else {
-                res.send('Note ' + id + ' deleted!');
+                res.send('Category ' + id + ' deleted!');
             }
         });
     });
 
-    app.put('/notes/:id', (req, res) => {
+    // ***** PUT ***** //
+    app.put('/Category/:id', (req, res) => {
         const id = req.params.id;
         const details = { '_id': new ObjectID(id) };
         // Problème si on veut uniquement modifier un attribut
-        if(req.body.body !== undefined && req.body.title !== undefined){
-            const note = { text: req.body.body, title: req.body.title };
-            db.collection('notes').update(details, note, (err, result) => {
+        if(req.body.label !== undefined){
+            const category = { label: req.body.label};
+            db.collection('Category').update(details, category, (err, result) => {
               if (err) {
                   res.send({'error':'An error has occurred'});
               } else {
-                  res.send(note);
+                  res.send(category);
               } 
             });
         }else{
