@@ -4,7 +4,6 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-aled',
   templateUrl: './aled-home.component.html',
-  styleUrls: ['../aled.components.css']
 })
 export class AledHomeComponent implements OnInit {
 

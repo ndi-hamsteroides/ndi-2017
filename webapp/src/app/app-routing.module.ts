@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from '@angular/router';
 
-import {HomeComponent} from "./home/home.component";
-import {InfosComponent} from "./infos/infos.component";
+import {HomeComponent} from './home/home.component';
+import {InfosComponent} from './infos/infos.component';
 import {AledHomeComponent} from './aled/aled-home/aled-home.component';
-import {AledOkComponent} from "./aled/aled-ok/aled-ok.component";
-import {AledBreatheComponent} from "./aled/aled-breathe/aled-breathe.component";
+import {AledOkComponent} from './aled/aled-ok/aled-ok.component';
+import {AledBreatheComponent} from './aled/aled-breathe/aled-breathe.component';
+import {AledBadComponent} from './aled/aled-bad/aled-bad.component';
+import {AledPlsComponent} from './aled/aled-pls/aled-pls.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'aled', component: AledHomeComponent },
   { path: 'aled-ok', component: AledOkComponent },
   { path: 'aled-breathe', component: AledBreatheComponent },
+  { path: 'aled-pls', component: AledPlsComponent },
+  { path: 'aled-bad', component: AledBadComponent },
 ];
 
 @NgModule({

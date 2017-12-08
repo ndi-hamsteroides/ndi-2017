@@ -15,6 +15,8 @@ import { AledHomeComponent } from './aled/aled-home/aled-home.component';
 import { SamComponent } from './sam/sam.component';
 import { AledOkComponent } from './aled/aled-ok/aled-ok.component';
 import { AledBreatheComponent } from './aled/aled-breathe/aled-breathe.component';
+import { AledPlsComponent } from './aled/aled-pls/aled-pls.component';
+import { AledBadComponent } from './aled/aled-bad/aled-bad.component';
 
 
 
@@ -29,6 +31,8 @@ import { AledBreatheComponent } from './aled/aled-breathe/aled-breathe.component
     SamComponent,
     AledOkComponent,
     AledBreatheComponent,
+    AledPlsComponent,
+    AledBadComponent,
   ],
   imports: [
     BrowserModule,

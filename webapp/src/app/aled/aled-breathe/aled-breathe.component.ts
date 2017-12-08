@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-aled-breathe',
@@ -7,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AledBreatheComponent implements OnInit {
 
-  private status: number;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    this.status = 0;
   }
 
+  goToPls() {
+    this.router.navigateByUrl("/aled-pls");
+  }
+
+  goToBad() {
+    this.router.navigateByUrl("/aled-bad");
+  }
 }
