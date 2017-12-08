@@ -22,6 +22,7 @@ import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidena
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { SamChoiceComponent } from './sam-choice/sam-choice.component';
+import { DriveTestComponent } from './drive-test/drive-test.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SamChoiceComponent } from './sam-choice/sam-choice.component';
     AledPlsComponent,
     AledBadComponent,
     SamChoiceComponent,
+    DriveTestComponent,
   ],
   imports: [
     BrowserModule,
