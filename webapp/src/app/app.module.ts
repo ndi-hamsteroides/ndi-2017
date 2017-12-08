@@ -12,6 +12,9 @@ import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AledComponent } from './aled/aled.component';
+import { SamComponent } from './sam/sam.component';
+import { AledOkComponent } from './aled-ok/aled-ok.component';
+import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
 
 
 
@@ -20,9 +23,12 @@ import { AledComponent } from './aled/aled.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
     InfosComponent,
     AledComponent,
+    SamComponent,
+    AledOkComponent,
+    AledBreatheComponent,
   ],
   imports: [
     BrowserModule,
