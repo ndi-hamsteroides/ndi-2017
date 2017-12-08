@@ -2,18 +2,49 @@
 
   <mat-drawer-container class="mainContainer" autosize>
 
-      <div class="container" >
-        <ul *ngIf="listPlayer">
-          <li *ngFor="let player of listPlayer">
-            {{player.name}}
-          </li>
-        </ul>
-        <div>
-          <label>Nom:
-            <input [(ngModel)]="newPlayer.name" placeholder="name"/>
-          </label>
-          <button [disabled]="alreadyExist()" (click)="add()">Ajouter</button>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-1"></div>
+          <label class="col-2">Nom:</label>
+          <input class="col-5" [(ngModel)]="newPlayer.name" placeholder="name"/>
+          <button class="col-3" [disabled]="alreadyExist()" (click)="add()">Ajouter</button>
+          <div class="col-1"></div>
         </div>
+
+        <div class="row">
+          <div class="col-2" ></div>
+          <ul class="col-8 sams" *ngIf="listPlayer">
+            <li *ngFor="let player of listPlayer; let i = index" (click)="erase(i)">
+              {{player.name}}<span class="glyphicons glyphicons-minus-sign"></span>
+            </li>
+          </ul>
+          <div class="col-2" ></div>
+        </div>
+
+        <div *ngIf="sam;else other_content">
+          <div class="row sam" *ngIf="sam">
+            <div class="col-2"></div>
+            <div class="sam" class="col-6">{{sam.name}}</div>
+          </div>
+        </div>
+
+        <ng-template #other_content>
+          <div class="sam">
+            <div class="row">
+              <div class="col-1"></div>
+              <button class="col-10" [disabled]="moreThanTwoLessThanTen()" (click)="choose()">Choisir SAM</button>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <span class="col-10">Il est possible de supprimer un participant en cliquant sur son prénom</span>
+            </div>
+
+          </div>
+        </ng-template>
+
+
+
       </div>
 
 

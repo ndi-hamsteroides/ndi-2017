@@ -10,7 +10,11 @@ module.exports = function (app, db) {
                     'error': 'An error has ocurred'
                 });
             } else {
-                res.send(result);
+                var list = []
+                for (i = 0; i < result.length; i++) {
+                    list.push(new UserEvent(result[i]._id, result[i].id_user, result[i].id_event));
+                }
+                res.send(list);
             }
         })
     });
@@ -23,7 +27,11 @@ module.exports = function (app, db) {
                     'error': 'An error has ocurred'
                 });
             } else {
-                res.send(result);
+                var list = []
+                for (i = 0; i < result.length; i++) {
+                    list.push(new UserEvent(result[i]._id, result[i].id_user, result[i].id_event));
+                }
+                res.send(list);
             }
         })
     });
