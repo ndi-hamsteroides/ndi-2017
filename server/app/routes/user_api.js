@@ -23,7 +23,6 @@ module.exports = function (app, db) {
 
     // ***** POST ***** //
     app.post('/User', (req, res) => {              
-        console.log(req.body.username);
         db.collection('User').findOne({username:req.body.username}, (err,item)=>{
             if (err) {
                 res.send({
