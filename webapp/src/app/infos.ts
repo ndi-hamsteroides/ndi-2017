@@ -1,5 +1,3 @@
-export class Infos {
-  _id: string;
+export class Info {
   text: string;
-  title:string;
 }
