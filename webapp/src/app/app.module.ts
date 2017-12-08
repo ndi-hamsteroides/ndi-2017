@@ -11,7 +11,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
-import { SidebarModule } from 'ng-sidebar';
 import { AledHomeComponent } from './aled/aled-home/aled-home.component';
 import { SamComponent } from './sam/sam.component';
 import { AledOkComponent } from './aled/aled-ok/aled-ok.component';
