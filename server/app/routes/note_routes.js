@@ -35,7 +35,7 @@ module.exports = function (app, db) {
             }
         });
     });
-
+    
     // ***** DELETE ***** //
     app.delete('/notes/:id', (req, res) => {
         const id = req.params.id;
