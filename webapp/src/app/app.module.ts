@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { SamChoiceComponent } from './sam-choice/sam-choice.component';
 import { DriveTestComponent } from './drive-test/drive-test.component';
+import { CredsComponent } from './creds/creds.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { DriveTestComponent } from './drive-test/drive-test.component';
     AledBadComponent,
     SamChoiceComponent,
     DriveTestComponent,
+    CredsComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import {AledBreatheComponent} from './aled/aled-breathe/aled-breathe.component';
 import {AledBadComponent} from './aled/aled-bad/aled-bad.component';
 import {AledPlsComponent} from './aled/aled-pls/aled-pls.component';
 import {DriveTestComponent} from "./drive-test/drive-test.component";
+import {CredsComponent} from "./creds/creds.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'aled-pls', component: AledPlsComponent },
   { path: 'aled-bad', component: AledBadComponent },
   { path: 'drive-test', component: DriveTestComponent },
+  { path: 'creds', component: CredsComponent },
 ];
 
 @NgModule({

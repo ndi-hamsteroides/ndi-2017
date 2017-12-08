@@ -31,4 +31,8 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/infos');
   }
 
+  goToCreds() {
+    this.router.navigateByUrl('/creds');
+  }
+
 }
