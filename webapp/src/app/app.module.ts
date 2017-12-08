@@ -47,7 +47,7 @@ import { DriveTestComponent } from './drive-test/drive-test.component';
     MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule,
     NoopAnimationsModule,BrowserAnimationsModule
   ],
-  providers: [HttpClientModule,TestGetService],
+  providers: [TestGetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,18 +2,20 @@
 
   <mat-drawer-container class="mainContainer" autosize>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-3"></div>
-          <button class="col-6" mat-raised-button (click)="playMiniGame()">Au hazard</button>
+      <div class="container" >
+        <ul *ngIf="listPlayer">
+          <li *ngFor="let player of listPlayer">
+            {{player.name}}
+          </li>
+        </ul>
+        <div>
+          <label>Nom:
+            <input [(ngModel)]="newPlayer.name" placeholder="name"/>
+          </label>
+          <button [disabled]="alreadyExist()" (click)="add()">Ajouter</button>
         </div>
-
-        <div class="row">
-          <div class="col-3"></div>
-          <button class="col-6 col-lg-3" mat-raised-button (click)="chooseOne()"> Tirage </button>
-        </div>
-
       </div>
+
 
   </mat-drawer-container>
 
