@@ -1,0 +1,22 @@
+<div>
+
+  <mat-drawer-container class="mainContainer" autosize>
+
+      <div class="container" >
+        <ul *ngIf="listPlayer">
+          <li *ngFor="let player of listPlayer">
+            {{player.name}}
+          </li>
+        </ul>
+        <div>
+          <label>Nom:
+            <input [(ngModel)]="newPlayer.name" placeholder="name"/>
+          </label>
+          <button [disabled]="alreadyExist()" (click)="add()">Ajouter</button>
+        </div>
+      </div>
+
+
+  </mat-drawer-container>
+
+</div>

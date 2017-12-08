@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: url('assets/images/bg.png') center center #2C3E50;
+}
+
+body div.container {
+  color: #FDE3A7;
+}
+
+.btn-arrow{
+  height:50px;
+  line-height:50px;
+  vertical-align:middle;
+  text-align:center;
+  padding:0 10px;
+  color:#ffffff;
+  background-color:#007bff;
+  position:relative;
+  display:inline-block;
+}
+.btn-arrow:after{
+  position:absolute;
+  right:-20px;
+  content:" ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 0 25px 20px;
+  border-color: transparent transparent transparent #007bff;
+}
+.btn-arrow:hover{
+  background-color:red;
+}
+.btn-arrow:hover:after{
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 0 25px 20px;
+  border-color: transparent transparent transparent #ff0000;
+}
