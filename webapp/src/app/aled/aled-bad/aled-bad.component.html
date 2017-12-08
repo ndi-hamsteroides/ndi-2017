@@ -1,0 +1,33 @@
+<div *ngIf="!phone" class="container">
+  <div class="col text-center">
+    <p>
+      Appelle les secours ou demande à quelqu'un de le faire et surtout ne laisse pas ton ami seul
+    </p>
+    <p>
+      <img src="../../../assets/images/robert-frown.png" height="200" width="150"/>
+    </p>
+    <button type="button" class="btn btn-success" (click)="doPhone()">Comment téléphoner ?</button>
+  </div>
+</div>
+
+<div *ngIf="phone" class="container">
+  <div class="col text-center">
+    <p>
+      Numéros à appeler
+    </p>
+    <ul>
+      <li>18 : Pompiers</li>
+      <li>15 : Samu</li>
+      <li>112 : Numéro international</li>
+    </ul>
+
+    <p>
+      Que dire au téléphone ?
+      S'identifiez Nom, Prenom, Telephone
+      Indiquez où se situe l'accident et comment y accéder
+      Indiquez ce qu'il se passe
+      Risque possible
+      Ne pas racrocher tant que la personne au bout du fil ne vous dit pas de le faire, suivre ses instructions
+    </p>
+  </div>
+</div>

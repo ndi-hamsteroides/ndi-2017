@@ -1,0 +1,33 @@
+<div>
+
+  <mat-drawer-container class="mainContainer" autosize>
+    <mat-drawer #drawer class="infoSidenav" mode="side">
+      <p>Categorie</p>
+    </mat-drawer>
+
+    <div class="mainContent">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-3"></div>
+          <button class="col-6" mat-raised-button (click)="shuffle()">Au hazard</button>
+        </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <button class="col-6 col-lg-3" mat-raised-button (click)="drawer.toggle()"> Choisir </button>
+        </div>
+
+
+        <div *ngIf="test">
+          <h2>{{ test.text | uppercase }} Details</h2>
+          <div><span>id: </span>{{test._id}}</div>
+          <div><span>id: </span>{{test.title}}</div>
+        </div>
+      </div>
+
+    </div>
+
+  </mat-drawer-container>
+
+</div>
+

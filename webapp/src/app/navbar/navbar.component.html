@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFC835;">
+  <span *ngIf="!isHome()" (click)="goBack()">
+    < Back
+  </span>
+  <a class="navbar-brand" (click)="goHome()">Hamster Futé</a>
+  <button *ngIf="!isHome()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div *ngIf="!isHome()" class="container">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/aled">ALED <span class="fa fa-exclamation-triangle"></span><span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/voiture">En route ?</a>
+        <a class="nav-item nav-link" href="/sam">SAM</a>
+        <a class="nav-item nav-link" href="/infos">Le saviez-vous ?</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<br/>
