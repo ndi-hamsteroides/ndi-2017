@@ -26,7 +26,24 @@ module.exports = function (app, db) {
         });
     });
 
-
+    app.get('/InfoCategory/GetByCategory/:id_category', (req, res) => {
+        db.collection('InfoCategory').find({id_category:req.params.id_category}).toArray(function(err, result){
+            if(err){
+                res.send({
+                    'error': 'An error has occurred'
+                });
+            }
+            else{
+                
+                var length = result.length;
+                while(Math.random() > 1/length){
+                    length--;
+                }
+                
+                res.send(result[result.length - length]);
+            }
+        })
+    });
     
 
     // ***** POST ***** //
