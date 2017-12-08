@@ -1,10 +1,33 @@
 <div>
-  Blop
-  <div *ngIf="test">
-    <h2>{{ test.text | uppercase }} Details</h2>
-    <div><span>id: </span>{{test._id}}</div>
-    <div><span>id: </span>{{test.title}}</div>
 
-  </div>
-  <button (click)="goBack()">go back</button>
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav class="sidenav">
+      Sidenav content goes here!
+    </mat-sidenav>
+
+    <div>
+      Infos
+    </div>
+
+
+
+    <div class="content">
+      <div class="row">
+        <button class="col" mat-raised-button (click)="shuffle()">Suivant</button>
+      </div>
+      <div class="row">
+        <button class="col" mat-raised-button (click)="sidenav.open()"> Open Sidenav </button>
+      </div>
+
+
+      <div *ngIf="test">
+        <h2>{{ test.text | uppercase }} Details</h2>
+        <div><span>id: </span>{{test._id}}</div>
+        <div><span>id: </span>{{test.title}}</div>
+      </div>
+
+    </div>
+
+  </mat-sidenav-container>
+
 </div>

@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+}
+.demo-panel {
+  margin: 10px;
+}

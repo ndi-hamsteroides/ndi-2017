@@ -11,15 +11,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
+import { SidebarModule } from 'ng-sidebar';
 
-
-
+import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
     InfosComponent,
   ],
   imports: [
@@ -27,6 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    SidebarModule.forRoot(),MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule,
+    NoopAnimationsModule,BrowserAnimationsModule
   ],
   providers: [HttpClientModule,TestGetService],
   bootstrap: [AppComponent]
