@@ -3,11 +3,11 @@
   <div class="col text-center">
     <button type="button" class="btn btn-block btn-danger" (click)="goToAled()">ALED ⚠️<span class="sr-only">(current)</span></button>
 
-    <button type="button" class="btn btn-block btn-danger" href="/voiture">En route ?</button>
+    <button type="button" class="btn btn-block btn-danger" (click)="goToVoiture()">En route ?</button>
 
-    <button type="button" class="btn btn-block btn-warning" href="/sam">SAM</button>
+    <button type="button" class="btn btn-block btn-warning" (click)="goToSam()">SAM</button>
 
-    <button type="button" class="btn btn-block btn-success" href="/infos">Le saviez-vous ?</button>
+    <button type="button" class="btn btn-block btn-success" (click)="goToInfos()">Le saviez-vous ?</button>
 
     <div>
       <a routerLink="/detail/test">Test info</a>

@@ -19,4 +19,16 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/aled');
   }
 
+  goToVoiture() {
+    this.router.navigateByUrl('/voiture');
+  }
+
+  goToSam() {
+    this.router.navigateByUrl('/sam');
+  }
+
+  goToInfos() {
+    this.router.navigateByUrl('/infos');
+  }
+
 }
