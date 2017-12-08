@@ -11,6 +11,8 @@ import {Infos} from "../infos";
 export class InfosComponent implements OnInit {
 
   test: Infos;
+  showSideBar : boolean = false;
+  showFiller = false;
 
   constructor(private location: Location,
               private testGet: TestGetService) { }
@@ -21,6 +23,14 @@ export class InfosComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  setShowSideBar(): void {
+    this.showSideBar = !this.showSideBar;
+  }
+
+  getShowSideBar(): boolean{
+    return this.showSideBar;
   }
 
   getTest(): void {
