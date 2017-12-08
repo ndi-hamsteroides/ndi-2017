@@ -27,11 +27,11 @@ module.exports = function (app, db) {
     });
 
     // ***** POST ***** //
-    app.post('/Info', (req, res) => {
+    app.post('/InfoCategory', (req, res) => {
         const info = {
             description: req.body.description
         };
-        db.collection('Info').insert(info, (err, result) => {
+        db.collection('InfoCategory').insert(info, (err, result) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
@@ -43,12 +43,12 @@ module.exports = function (app, db) {
     });
     
     // ***** DELETE ***** //
-    app.delete('/Info/:id', (req, res) => {
+    app.delete('/InfoCategory/:id', (req, res) => {
         const id = req.params.id;
         const details = {
             '_id': new ObjectID(id)
         };
-        db.collection('Info').remove(details, (err, item) => {
+        db.collection('InfoCategory').remove(details, (err, item) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
@@ -59,13 +59,13 @@ module.exports = function (app, db) {
         });
     });
 
-    app.put('/Info/:id', (req, res) => {
+    app.put('/InfoCategory/:id', (req, res) => {
         const id = req.params.id;
         const info = { '_id': new ObjectID(id) };
         // Problème si on veut uniquement modifier un attribut
         if(req.body.description !== undefined){
             const description = { description: req.body.description};
-            db.collection('Info').update(info, description, (err, result) => {
+            db.collection('InfoCategory').update(info, description, (err, result) => {
               if (err) {
                   res.send({'error':'An error has occurred'});
               } else {
