@@ -12,6 +12,7 @@ export class InfosComponent implements OnInit {
 
   test: Infos;
   showSideBar : boolean = false;
+  showFiller = false;
 
   constructor(private location: Location,
               private testGet: TestGetService) { }

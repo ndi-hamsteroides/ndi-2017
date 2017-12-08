@@ -20,6 +20,8 @@ import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
 import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { SamChoiceComponantComponent } from './sam-choice-componant/sam-choice-componant.component';
+import { SamChoiceComponent } from './sam-choice/sam-choice.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     SamComponent,
     AledOkComponent,
     AledBreatheComponent,
+    SamChoiceComponent,
   ],
   imports: [
     BrowserModule,
