@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriveTestComponent implements OnInit {
 
+  private start: boolean;
+  private end : boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.start = false;
+    this.end = false;
+  }
+
+  doStart() {
+    this.start = true;
+  }
+
+  doEnd() {
+    this.end = true;
   }
 
 }

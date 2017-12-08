@@ -1,13 +1,34 @@
-<div class="container">
+<div *ngIf="!start && !end" class="container">
   <div class="col text-center">
     <p>
       Est tu vraiment prêt à prendre la route ?
     </p>
     Passe ce test pour tester ton temps de réaction.
-    <br/>
-    Tu va devoir toucher Robert le hamster dès qu'il se reveille !
     <p>
-      <button type="button" class="btn btn-info">Commencer</button>
+      Tu va devoir toucher Robert le hamster dès qu'il se reveille !
     </p>
+    <button type="button" class="btn btn-info" (click)="doStart()">Commencer</button>
+  </div>
+</div>
+
+<div *ngIf="start && !end" class="container">
+  <div class="col text-center">
+    <img src="../../assets/images/Dodo.png" height="301" width="298"/>
+    <img src="../../assets/images/Reveille.png" height="301" width="298"/>
+  </div>
+</div>
+
+<div *ngIf="end" class="container">
+  <div class="col text-center">
+    <p>
+      Ton temps de réaction est de
+    </p>
+    {{temps}} ms
+    <div *ngIf="!ok">
+      Ce n'est pas raisonnable de prendre le volant.
+    </div>
+    <div *ngIf="ok">
+      Ton temps de réaction semble normal.
+    </div>
   </div>
 </div>
