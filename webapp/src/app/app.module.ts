@@ -12,6 +12,10 @@ import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarModule } from 'ng-sidebar';
+import { AledComponent } from './aled/aled.component';
+import { SamComponent } from './sam/sam.component';
+import { AledOkComponent } from './aled-ok/aled-ok.component';
+import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
 
 import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -23,6 +27,10 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     HomeComponent,
     NavbarComponent,
     InfosComponent,
+    AledComponent,
+    SamComponent,
+    AledOkComponent,
+    AledBreatheComponent,
   ],
   imports: [
     BrowserModule,

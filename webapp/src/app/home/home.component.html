@@ -1,7 +1,12 @@
-<a class="nav-item nav-link" href="#">ALED <span class="fa fa-exclamation-triangle"></span><span class="sr-only">(current)</span></a>
-<a class="nav-item nav-link" href="#">En route ?</a>
-<a class="nav-item nav-link" href="#">SAM</a>
-<a class="nav-item nav-link" href="#">Le saviez-vous ?</a>
-<div>
-  <a routerLink="/detail/test">Test info</a>
+<br/>
+<div class="container">
+  <div class="col text-center">
+    <button type="button" class="btn btn-block btn-danger" (click)="goToAled()">ALED ⚠️<span class="sr-only">(current)</span></button>
+    <button type="button" class="btn btn-block btn-danger" (click)="goToVoiture()">En route ?</button>
+    <button type="button" class="btn btn-block btn-warning" (click)="goToSam()">SAM</button>
+    <button type="button" class="btn btn-block btn-success" (click)="goToInfos()">Le saviez-vous ?</button>
+    <br/>
+    <img src="../../assets/images/robert-cute.png" height="200" width="150"/>
+  </div>
 </div>
+
