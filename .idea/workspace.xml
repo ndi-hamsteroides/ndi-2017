@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72706a04-7f78-4a62-baad-c393d7967c3a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/webapp/playerName.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/webapp/src/app/playerName.ts" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/webapp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/webapp/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html" afterPath="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.ts" afterPath="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.ts" />
+      <change beforePath="$PROJECT_DIR$/webapp/src/app/test-get.service.ts" afterPath="$PROJECT_DIR$/webapp/src/app/test-get.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,16 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sam-choice.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="infos.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -37,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aled-bad.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webapp/src/app/aled/aled-bad/aled-bad.component.html">
+      <file leaf-file-name="infos.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="36">
+              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -50,8 +45,8 @@
       <file leaf-file-name="infos.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -60,28 +55,52 @@
       <file leaf-file-name="test-get.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/src/app/test-get.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+            <state relative-caret-position="432">
+              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerName.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/src/app/playerName.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sam-choice.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sam-choice.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/src/app/app-routing.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="54">
+              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -104,11 +123,14 @@
         <option value="$PROJECT_DIR$/webapp/src/app/aled/aled-home/aled-home.component.ts" />
         <option value="$PROJECT_DIR$/webapp/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/webapp/src/app/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html" />
         <option value="$PROJECT_DIR$/webapp/src/app/infos/infos.component.ts" />
         <option value="$PROJECT_DIR$/webapp/src/app/aled/aled-bad/aled-bad.component.html" />
-        <option value="$PROJECT_DIR$/webapp/src/app/test-get.service.ts" />
+        <option value="$PROJECT_DIR$/webapp/playerName.js" />
+        <option value="$PROJECT_DIR$/webapp/src/app/playerName.ts" />
         <option value="$PROJECT_DIR$/webapp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/webapp/src/app/test-get.service.ts" />
+        <option value="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html" />
+        <option value="$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.ts" />
       </list>
     </option>
   </component>
@@ -154,35 +176,6 @@
               <item name="ndi-2017" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ndi-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndi-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndi-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndi-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndi-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndi-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="infos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ndi-2017" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ndi-2017" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="sam" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -226,7 +219,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18400000" />
+    <option name="totallyTimeSpent" value="22087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
@@ -279,7 +272,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -402,14 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -422,14 +409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -465,7 +444,7 @@
         <state relative-caret-position="468">
           <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -502,30 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/test-get.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -534,26 +489,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html">
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/aled/aled-bad/aled-bad.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/playerName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="88" lean-forward="false" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/infos/infos.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/playerName.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/test-get.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/src/app/sam-choice/sam-choice.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/src/app/aled/aled-bad/aled-bad.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="54">
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
