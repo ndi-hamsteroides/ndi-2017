@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToSam() {
-    this.router.navigateByUrl('/sam');
+    this.router.navigateByUrl('/samChoice');
   }
 
   goToInfos() {

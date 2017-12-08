@@ -10,9 +10,8 @@ import {Infos} from "../infos";
 })
 export class InfosComponent implements OnInit {
 
+
   test: Infos;
-  showSideBar : boolean = false;
-  showFiller = false;
 
   constructor(private location: Location,
               private testGet: TestGetService) { }
@@ -21,21 +20,15 @@ export class InfosComponent implements OnInit {
     this.getTest();
   }
 
-  goBack(): void {
-    this.location.back();
-  }
-
-  setShowSideBar(): void {
-    this.showSideBar = !this.showSideBar;
-  }
-
-  getShowSideBar(): boolean{
-    return this.showSideBar;
-  }
-
+  //Permet de récupérer des données
   getTest(): void {
     this.testGet.getInfos()
       .subscribe(test => this.test = test);
+  }
+
+  //Tire une infos aux hazards
+  shuffle(): void {
+
   }
 
 }
