@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+  background: url('assets/images/bg.png') center center #2C3E50;
+}
+
+body div.container {
+  color: #FDE3A7;
+}
+
 .btn-arrow{
   height:50px;
   line-height:50px;
