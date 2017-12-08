@@ -1,53 +1,35 @@
-<div>
-
-  <mat-drawer-container class="mainContainer" autosize>
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-1"></div>
-          <label class="col-2">Nom:</label>
-          <input class="col-5" [(ngModel)]="newPlayer.name" placeholder="name"/>
-          <button class="col-3" [disabled]="alreadyExist()" (click)="add()">Ajouter</button>
-          <div class="col-1"></div>
+<div class="container">
+  <div class="col text-center">
+    <div *ngIf="sam;else other_content">
+      <div *ngIf="sam">
+        <div>Sam est
+          <span class="badge badge-pill badge-success">{{sam.name}}</span>
         </div>
-
-        <div class="row">
-          <div class="col-2" ></div>
-          <ul class="col-8 sams" *ngIf="listPlayer">
-            <li *ngFor="let player of listPlayer; let i = index" (click)="erase(i)">
-              {{player.name}}<span class="glyphicons glyphicons-minus-sign"></span>
-            </li>
-          </ul>
-          <div class="col-2" ></div>
-        </div>
-
-        <div *ngIf="sam;else other_content">
-          <div class="row sam" *ngIf="sam">
-            <div class="col-2"></div>
-            <div class="sam" class="col-6">{{sam.name}}</div>
-          </div>
-        </div>
-
-        <ng-template #other_content>
-          <div class="sam">
-            <div class="row">
-              <div class="col-1"></div>
-              <button class="col-10" [disabled]="moreThanTwoLessThanTen()" (click)="choose()">Choisir SAM</button>
-            </div>
-            <div class="row">
-              <div class="col-1"></div>
-              <span class="col-10">Il est possible de supprimer un participant en cliquant sur son prénom</span>
-            </div>
-
-          </div>
-        </ng-template>
-
-
-
       </div>
+    </div>
+    <form name="searchForm" class="form-inline">
+      <div class="input-group w-100 mt-3">
+        <input type="text" class="form-control" [(ngModel)]="newPlayer.name" name="input" placeholder="Ajouter un participant">
+        <button class="input-group-addon btn btn-info" [disabled]="alreadyExist()" (click)="add()">
+          <span style="color: white"> + </span>
+        </button>
+      </div>
+    </form>
+    <br/>
+    <div class="text-left">
+      <ul *ngIf="listPlayer">
+        <li *ngFor="let player of listPlayer; let i = index" (click)="erase(i)">
+          <span class="badge badge-pill badge-info">{{player.name}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-
-  </mat-drawer-container>
+  <ng-template #other_content>
+    <div class="sam">
+        <button type="button" class="btn btn-success btn-block" [disabled]="moreThanTwoLessThanTen()" (click)="choose()">Choisir SAM</button>
+        <small>Il est possible de supprimer un participant en cliquant sur son prénom</small>
+    </div>
+  </ng-template>
 
 </div>
