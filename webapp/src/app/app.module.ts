@@ -43,7 +43,7 @@ import { SamChoiceComponent } from './sam-choice/sam-choice.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    SidebarModule.forRoot(),MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule,
+    MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule,
     NoopAnimationsModule,BrowserAnimationsModule
   ],
   providers: [HttpClientModule,TestGetService],
