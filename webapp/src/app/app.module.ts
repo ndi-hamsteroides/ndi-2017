@@ -13,9 +13,10 @@ import {TestGetService} from "./test-get.service";
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarModule } from 'ng-sidebar';
 import { AledComponent } from './aled/aled.component';
+import { AledHomeComponent } from './aled/aled-home/aled-home.component';
 import { SamComponent } from './sam/sam.component';
-import { AledOkComponent } from './aled-ok/aled-ok.component';
-import { AledBreatheComponent } from './aled-breathe/aled-breathe.component';
+import { AledOkComponent } from './aled/aled-ok/aled-ok.component';
+import { AledBreatheComponent } from './aled/aled-breathe/aled-breathe.component';
 
 import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -29,7 +30,7 @@ import { SamChoiceComponent } from './sam-choice/sam-choice.component';
     HomeComponent,
     NavbarComponent,
     InfosComponent,
-    AledComponent,
+    AledHomeComponent,
     SamComponent,
     AledOkComponent,
     AledBreatheComponent,
