@@ -3,18 +3,21 @@ var Event = require('../../models/event_model');
 
 module.exports = function (app, db) {
 	// ***** GET ***** //
-	app.get('Event/:id_master', (req, res) => {
-		const id_master = req.params.id_master;
-		const details = {
-			'_id': new ObjectID(id)
-		};
-		db.collection('Event').findOne(details, (err, item) => {
+	app.get('/Event/:id_master', (req, res) => {
+        console.log('hhhhhh');
+		db.collection('Event').findOne({id_master:req.params.id_master}, (err, item) => {
 			if (err) {
 				res.send({
 					'error': 'An error has occurred'
 				});
 			} else {
-				res.send(new Event(item._id, item.id_master, item.sam));
+                if(item === null){
+                    res.send(item);
+                }
+                else{
+                    var e = new Event(item.id, item.id_master, item.sam)
+                    res.send(e);
+                }
 			}
 		});
 	});
@@ -33,11 +36,11 @@ module.exports = function (app, db) {
                     });
                 }
                 else{
-                    const id_master = {
+                    const event = {
                         id_master: req.body.id_master,
+                        sam: req.body.sam
                     };
-                    const sam = null;
-                    db.collection('Event').insert(id_master, sam, (err, result) => {
+                    db.collection('Event').insert(event, (err, result) => {
                         if (err) {
                             res.send({
                                 'error': 'An error has occurred'
