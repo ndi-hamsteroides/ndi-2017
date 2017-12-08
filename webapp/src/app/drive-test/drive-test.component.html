@@ -1,20 +1,33 @@
 <div *ngIf="!start && !end" class="container">
-  <div class="col text-center">
-    <p>
-      Est tu vraiment prêt à prendre la route ?
-    </p>
-    Passe ce test pour tester ton temps de réaction.
-    <p>
-      Tu va devoir toucher Robert le hamster dès qu'il se reveille !
-    </p>
-    <button type="button" class="btn btn-info" (click)="doStart()">Commencer</button>
+  <div class="row">
+    <div class="col">
+      <img src="../../assets/images/robert-alone-scream.png" height="200" width="100"/>
+    </div>
+    <div class="col text-center">
+      <p>
+        Est tu vraiment prêt à prendre la route ?
+      </p>
+      Passe ce test pour tester ton temps de réaction.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <p>
+        Tu va devoir toucher Robert le hamster dès qu'il se reveille !
+      </p>
+      <button type="button" class="btn btn-info" (click)="doStart()">Commencer</button>
+    </div>
   </div>
 </div>
 
 <div *ngIf="start && !end" class="container">
   <div class="col text-center">
-    <img src="../../assets/images/Dodo.png" height="301" width="298"/>
-    <img src="../../assets/images/Reveille.png" height="301" width="298"/>
+    <span *ngIf="!wokeup">
+      <img src="../../assets/images/Dodo.png" height="250" width="250"/>
+    </span>
+    <span *ngIf="wokeup">
+      <img src="../../assets/images/Reveille.png" height="250" width="250" (click)="doPress()"/>
+    </span>
   </div>
 </div>
 
@@ -23,9 +36,19 @@
     <p>
       Ton temps de réaction est de
     </p>
-    {{temps}} ms
+    {{time_taken}} ms
     <div *ngIf="!ok">
-      Ce n'est pas raisonnable de prendre le volant.
+      <span class="badge badge-pill badge-danger">Ce n'est pas raisonnable de prendre le volant.</span>
+      <p>
+        Tu devrais
+      </p>
+      <ul class="text-left">
+        <li>Prendre les transports en commun</li>
+        <li>Prendre un taxi</li>
+        <li>Rester sur place</li>
+        <li>Te faire ramener</li>
+      </ul>
+
     </div>
     <div *ngIf="ok">
       Ton temps de réaction semble normal.
