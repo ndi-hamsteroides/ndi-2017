@@ -1,8 +1,8 @@
 'use strict'
 class Event {
-	constructor(id,idUtilisateur, sam){
+	constructor(id,id_master, sam){
 		this.id = id;
-		this.id = idUtilisateur;
+		this.id = id_master;
 		this.sam = sam;
 	}
 }
