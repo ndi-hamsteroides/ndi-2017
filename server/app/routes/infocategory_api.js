@@ -1,5 +1,6 @@
 // routes/note_routes.js
 var InfoCategory = require('../../models/infocategory_model');
+var Info = require('../../models/info_model');
 var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function (app, db) {
@@ -39,8 +40,23 @@ module.exports = function (app, db) {
                 while(Math.random() > 1/length){
                     length--;
                 }
-                
-                res.send(result[result.length - length]);
+                var info;
+                var id_info = result[result.length - length].id_info;
+                db.collection('Info').findOne({'_id':new ObjectID(id_info)}, (err, item) => {
+                    if (err) {
+                        res.send({
+                            'error': 'An error has occurred'
+                        });
+                    } else {
+                        if(item === null){
+                            res.send(item);
+                        }
+                        else{
+                            console.log(item);
+                            res.send(new Info(item._id,item.description));
+                        }
+                    }
+                });
             }
         })
     });

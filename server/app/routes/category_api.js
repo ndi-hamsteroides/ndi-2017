@@ -21,6 +21,26 @@ module.exports = function (app, db) {
         });
     });
 
+    app.get('/Category', (req, res) => {
+        db.collection('Category').find({}).toArray(function(err, result){
+            if(err){
+                res.send({
+                    'error': 'An error has occurred'
+                });
+            }
+            else{
+                var resultArray = [];
+                for(var i = 0; i< result.length;i++){
+                    resultArray.push(new Category(result[i]._id,result[i].label));
+                }
+                console.log(resultArray);
+                res.send(resultArray);
+            }
+        })
+    });
+
+    
+
     // ***** POST ***** //
     app.post('/Category', (req, res) => {
         const category = {
