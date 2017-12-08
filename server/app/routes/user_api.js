@@ -21,6 +21,22 @@ module.exports = function (app, db) {
         });
     });
 
+    app.get('/User/:username', (req, res) => {
+        const username = {
+            'username': req.params.username
+        };
+        db.collection('User').findOne(username, (err, item) => {
+            if (err) {
+                res.send({
+                    'error': 'An error has occurred'
+                });
+            } else {
+                var u = new User(item._id,item.username);
+                res.send(u);
+            }
+        });
+    });
+
     // ***** POST ***** //
     app.post('/User', (req, res) => {              
         db.collection('User').findOne({username:req.body.username}, (err,item)=>{
@@ -32,7 +48,7 @@ module.exports = function (app, db) {
                 console.log(item);
                 if(item !== null){
                     res.send({
-                        'error': 'An error has occurred'
+                        'error': 'This username already exists'
                     }); 
                 }
                 else{
@@ -75,14 +91,30 @@ module.exports = function (app, db) {
         const details = { '_id': new ObjectID(id) };
         // Problème si on veut uniquement modifier un attribut
         if(req.body.username !== undefined){
-            const user = { username: req.body.username};
-            db.collection('User').update(details, user, (err, result) => {
-              if (err) {
-                  res.send({'error':'An error has occurred'});
-              } else {
-                  res.send(user);
-              } 
-            });
+            db.collection('User').findOne({username:req.body.username}, (err,item)=>{
+                if (err) {
+                    res.send({
+                        'error': 'An error has occurred'
+                    });
+                } else {
+                    console.log(item);
+                    if(item !== null){
+                        res.send({
+                            'error': 'This username already exists'
+                        }); 
+                    }
+                    else{
+                        const user = { username: req.body.username};
+                        db.collection('User').update(details, user, (err, result) => {
+                          if (err) {
+                              res.send({'error':'An error has occurred'});
+                          } else {
+                              res.send(user);
+                          } 
+                        });
+                    }
+                }
+            })           
         }else{
             res.send({'error':'An error has occurred'})
         }
