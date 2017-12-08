@@ -11,7 +11,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {TestGetService} from "./test-get.service";
 
 import { AppRoutingModule } from './app-routing.module';
-import { SidebarModule } from 'ng-sidebar';
 import { AledHomeComponent } from './aled/aled-home/aled-home.component';
 import { SamComponent } from './sam/sam.component';
 import { AledOkComponent } from './aled/aled-ok/aled-ok.component';
@@ -23,6 +22,7 @@ import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidena
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { SamChoiceComponent } from './sam-choice/sam-choice.component';
+import { DriveTestComponent } from './drive-test/drive-test.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { SamChoiceComponent } from './sam-choice/sam-choice.component';
     AledPlsComponent,
     AledBadComponent,
     SamChoiceComponent,
+    DriveTestComponent,
   ],
   imports: [
     BrowserModule,

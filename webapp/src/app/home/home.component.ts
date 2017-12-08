@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToVoiture() {
-    this.router.navigateByUrl('/voiture');
+    this.router.navigateByUrl('/drive-test');
   }
 
   goToSam() {
