@@ -19,25 +19,44 @@ module.exports = function (app, db) {
                     res.send(item);
                 }
                 else{
-                    var i = new InfoCategory(item._id,item.description);
+                    var i = new InfoCategory(item._id,item.id_info,item.id_category);
                     res.send(i);
                 }
             }
         });
     });
 
+
+    
+
     // ***** POST ***** //
     app.post('/InfoCategory', (req, res) => {
-        const info = {
-            description: req.body.description
+        const infoCategory = {
+            id_info: req.body.id_info,
+            id_category: req.body.id_category
         };
-        db.collection('InfoCategory').insert(info, (err, result) => {
+        db.collection('InfoCategory').findOne({id_info:req.body.id_info,id_category:req.body.id_category}, (err, item) => {
             if (err) {
                 res.send({
                     'error': 'An error has occurred'
                 });
             } else {
-                res.send(result.ops[0]);
+                if(item === null){
+                    db.collection('InfoCategory').insert(infoCategory, (err, result) => {
+                        if (err) {
+                            res.send({
+                                'error': 'An error has occurred'
+                            });
+                        } else {
+                            res.send(result.ops[0]);
+                        }
+                    });
+                }
+                else{
+                    res.send({
+                        'error': 'The couple info-category already exists'
+                    });      
+                }
             }
         });
     });
@@ -54,7 +73,7 @@ module.exports = function (app, db) {
                     'error': 'An error has occurred'
                 });
             } else {
-                res.send('Info ' + id + ' deleted!');
+                res.send('InfoCategory ' + id + ' deleted!');
             }
         });
     });
@@ -63,14 +82,14 @@ module.exports = function (app, db) {
         const id = req.params.id;
         const info = { '_id': new ObjectID(id) };
         // Problème si on veut uniquement modifier un attribut
-        if(req.body.description !== undefined){
-            const description = { description: req.body.description};
-            db.collection('InfoCategory').update(info, description, (err, result) => {
+        if(req.body.id_info !== undefined && req.body.id_category !== undefined){           
+            const infoCategory = { id_info: req.body.id_info, id_category: req.body.id_category};
+            db.collection('InfoCategory').update(info, infoCategory, (err, result) => {
               if (err) {
                   res.send({'error':'An error has occurred'});
               } else {
-                  var infoObj = new Info(req.params.id,req.body.description);
-                  res.send(infoObj);
+                  var infoCatObj = new InfoCategory(req.params.id,req.body.id_info,req.body.id_category);
+                  res.send(infoCatObj);
               } 
             });
         }else{
