@@ -14,8 +14,10 @@ module.exports = function (app, db) {
                     'error': 'An error has occurred'
                 });
             } else {
+                
                 res.header("Access-Control-Allow-Origin", "*");
                 res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+                console.log("izoezouyb");
                 res.send(item);
             }
         });
